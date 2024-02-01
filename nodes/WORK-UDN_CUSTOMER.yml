@@ -21,7 +21,7 @@ steps:
 
         How about symbols?
         !@#$%^&*()_+=-'":;~`
-      isMultisource: false
+      isMultisource: true
       locationName: WORK
       materializationType: table
       metadata:
@@ -38,11 +38,13 @@ steps:
             dataType: NUMBER
             defaultValue: ""
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: SYSTEM_COLUMN_1
             nullable: true
             sourceColumnReferences:
               - columnReferences: []
-                transform: "1"
+                transform: 1{{even_odd('"CUSTOMER"."C_NATIONKEY"')}}
             systemColumn1: true
           - appliedColumnTests: {}
             columnReference:
@@ -50,19 +52,23 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: NUMBER(38,0)
             description: SF*150,000 are populated
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_CUSTKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: 4925cd56-c31d-46d2-a46f-9ae3f2a32e99
                     stepCounter: cc70a2d4-b877-4f2c-85bb-8e8b6809b964
-                transform: ""
+                transform: "{{invalid code...}}"
           - appliedColumnTests: {}
             columnReference:
               columnCounter: cce904e3-e711-4345-a95c-35d51488d3b1
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: VARCHAR(25)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_NAME
             nullable: false
             sourceColumnReferences:
@@ -76,6 +82,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: VARCHAR(40)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_ADDRESS
             nullable: false
             sourceColumnReferences:
@@ -89,6 +97,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: NUMBER(38,0)
             description: Foreign Key to N_NATIONKEY
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_NATIONKEY
             nullable: false
             sourceColumnReferences:
@@ -102,6 +112,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: VARCHAR(15)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_PHONE
             nullable: false
             sourceColumnReferences:
@@ -115,6 +127,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: NUMBER(12,2)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_ACCTBAL
             nullable: false
             sourceColumnReferences:
@@ -128,6 +142,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: VARCHAR(10)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_MKTSEGMENT
             nullable: true
             sourceColumnReferences:
@@ -141,6 +157,8 @@ steps:
               stepCounter: 9d9fefeb-a22c-4ab9-8342-b70423fdf428
             dataType: VARCHAR(117)
             description: ""
+            isBusinessKey: true
+            isChangeTracking: true
             name: C_COMMENT
             nullable: true
             sourceColumnReferences:
@@ -162,7 +180,7 @@ steps:
             name: UDN_CUSTOMER
             noLinkRefs: []
       name: UDN_CUSTOMER
-      overrideSQL: false
+      overrideSQL: true
       schema: ""
       sqlType: "2"
       type: sql

@@ -50,7 +50,7 @@ steps:
               - columnReferences:
                   - columnCounter: b50fe155-c065-4558-a3c5-c6c940ed92f1
                     stepCounter: 41bfd588-b54d-4231-ad48-2819f4296db3
-                transform: ""
+                transform: "{{even_odd('\"CUSTOMER\".\"C_NATIONKEY\"')}}"
           - columnReference:
               columnCounter: 635d99f0-0e48-4b77-b4b5-fcf2487fd49f
               stepCounter: 03615458-d994-47cb-bb11-a66770cf063b

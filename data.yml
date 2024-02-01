@@ -12,7 +12,13 @@ locations:
       "2":
         database: BEN_EDW
         schema: WS_SCHEMA_1
-macros: {}
+macros:
+  Macro-1:
+    id: "1"
+    macroString: |-
+      {%- macro even_odd(column) -%}
+          CASE WHEN MOD({{ column }}, 2) = 0 THEN 'EVEN' ELSE 'ODD' END
+      {%- endmacro %}
 packages: {}
 projects: {}
 stepTypes:
@@ -1141,7 +1147,7 @@ stepTypes:
     version: 1
   StepType-View:
     id: View
-    isDisabled: true
+    isDisabled: false
     metadata:
       defaultStorageLocation: null
       error: null

@@ -1,0 +1,159 @@
+steps:
+  V_CUSTOMER1-685ed388-d547-4502-9199-4c2b4659d0f0:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: |
+        Newlines are also working properly
+        wherever they are
+
+        How about symbols?
+        !@#$%^&*()_+=-'":;~`
+      isMultisource: false
+      locationName: WORK
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 0d35264c-66cc-4d56-8b65-50379b306b99
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: NUMBER
+            description: ""
+            name: SYSTEM_COLUMN_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 75df581e-e887-48a4-917c-9929c836ccc2
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: e61372b8-751d-41b8-96f5-bc5bb58881d4
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: NUMBER
+            description: ""
+            name: SYSTEM_COLUMN_1
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c018503e-3275-4ae7-85fa-be1e4935b547
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: 1bbea68c-d752-4b71-936a-7d6c1b5bfbd8
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: NUMBER(38,0)
+            description: SF*150,000 are populated
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 567111db-a86b-4ceb-9958-5947827ef3c6
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: 4855b1b7-77bd-42bd-9cbe-ec341ef45fd6
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: VARCHAR(25)
+            description: ""
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 64f585f7-dd86-43ef-a2b4-46de5bbba4b5
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: 4dc67eb4-ecdf-4f75-828a-93b28f45600d
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: VARCHAR(40)
+            description: ""
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 883112f3-1718-4162-9de4-9b27f554c9a5
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: aa14a630-d73b-48fd-b4f4-0375a5d8f159
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: NUMBER(38,0)
+            description: Foreign Key to N_NATIONKEY
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1086a2eb-5f2b-48bd-b398-500c6ee542db
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: fa4595b8-50fa-4a46-bc47-7f1db60ad223
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: VARCHAR(15)
+            description: ""
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 78f54562-64bf-4925-a172-fa13a7172212
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: f47bdcc8-ae9c-4356-9250-d8f90068f415
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: NUMBER(12,2)
+            description: ""
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 83abd34b-a0a9-4227-9112-a912a2596f1d
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: 6cb637d7-b601-44af-8106-87a8f08f8902
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: VARCHAR(10)
+            description: ""
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 2163bd0d-cc93-4675-805a-e8558675ff92
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+          - columnReference:
+              columnCounter: bf5c299f-57cc-46f8-b94c-f42ba0ad3866
+              stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0
+            dataType: VARCHAR(117)
+            description: ""
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 177d11cd-1ef3-485c-a5dc-de2e540b4cd3
+                    stepCounter: 53577925-fbf6-42c0-bbb7-67622f7e0285
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases: {}
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: WORK
+                nodeName: UDN_CUSTOMER1
+            join:
+              joinCondition: FROM {{ ref('WORK', 'UDN_CUSTOMER1') }} "UDN_CUSTOMER1"
+            name: V_CUSTOMER1
+            noLinkRefs: []
+      name: V_CUSTOMER1
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: 685ed388-d547-4502-9199-4c2b4659d0f0

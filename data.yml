@@ -228,7 +228,7 @@ stepTypes:
           templateString: ""
         run:
           templateString: ""
-    name: UDN CD-8765
+    name: pkg udn-7793
     version: 1
   StepType-Dimension:
     id: Dimension

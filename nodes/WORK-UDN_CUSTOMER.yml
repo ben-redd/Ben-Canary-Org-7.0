@@ -25,7 +25,12 @@ steps:
       locationName: WORK
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: false
+            description: ""
+            name: Test
+            runOrder: Before
+            templateString: SELECT * FROM {{ ref_no_link('COALESCE_SAMPLE_DATABASE','UDN_CUSTOMER')}} WHERE C_NATIONKEY > 0
         columns:
           - acceptedValues:
               strictMatch: true

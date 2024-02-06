@@ -15,10 +15,7 @@ locations:
 macros:
   Macro-1:
     id: "1"
-    macroString: |-
-      {%- macro even_odd(column) -%}
-          CASE WHEN MOD({{ column }}, 2) = 0 THEN 'EVEN' ELSE 'ODD' END
-      {%- endmacro %}
+    macroString: ""
 packages: {}
 projects: {}
 stepTypes:
@@ -104,9 +101,11 @@ stepTypes:
             displayName: 'My Dropdown Selector'          # GUI display name (string, required) 
             attributeName: 'dropdown'                    # Name of element used in templates (string, required)
             default: 'option 1'                          # Default selection (string)
-            options:                                     # Dropdown options (array of strings, required)
-            - 'option 1'
-            - 'option 2'
+            options:
+            - test1
+            - test2
+            - test3
+                                                    # Dropdown options (array of strings, required)
             isRequired: false                            # If a config item is required (boolean, defaults false)
             enableIf: 'true'                             # If true, display this element, else hide this element. 
                                                          # Jinja expression resulting in a quoted boolean may be used for dynamic behavior 
@@ -144,11 +143,22 @@ stepTypes:
               enableIf: 'true'                           # If true, display this element, else hide this element. 
 
             - type: textBox                              # SQL to be executed after run
-              displayName: 'Test SQL Left Alignment'                    # GUI display name (string, required) 
-              attributeName: 'testSQL'                   # Name of element used in templates (string, required)
+              displayName: 'Test SQL Left Alignment'
+              attributeName: 'sqlTest'      
               syntax: 'sql'                              # Syntax highlighting in text box (string, defaults 'none', 'none' | 'sql')
               isRequired: false                          # If a config item is required (boolean, defaults false)
               enableIf: 'true'                           # If true, display this element, else hide this element. 
+
+            - type: dropdownSelector                       # Dropdown of options
+              displayName: 'My Dropdown Selector'          # GUI display name (string, required) 
+              attributeName: 'dropdownIndent'                    # Name of element used in templates (string, required)
+              default: 'option 1'                          # Default selection (string)
+              options: 
+              - valid option 1
+              - valid option 2
+              - valid option 3              # Dropdown options (array of strings, required)
+              isRequired: false                            # If a config item is required (boolean, defaults false)
+              enableIf: 'true'  
                                                          # Jinja expression resulting in a quoted boolean may be used for dynamic behavior 
                                                         # (boolean string, 'true' | 'false', defaults 'true')
             
@@ -234,7 +244,7 @@ stepTypes:
           templateString: ""
         run:
           templateString: ""
-    name: pkg udn-7793
+    name: pkg udn-8606
     version: 1
   StepType-Dimension:
     id: Dimension

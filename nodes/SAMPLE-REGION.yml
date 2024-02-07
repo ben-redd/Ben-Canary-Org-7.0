@@ -1,0 +1,63 @@
+steps:
+  REGION-7085da36-4e3a-4b5f-a188-68637e407fe7:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 08e4851b-f286-4dd7-8b24-1e7bb8f9efa6
+              stepCounter: 7085da36-4e3a-4b5f-a188-68637e407fe7
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: R_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 55b22a3e-6ab0-4643-aba5-4729fdf5f8d5
+              stepCounter: 7085da36-4e3a-4b5f-a188-68637e407fe7
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: R_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f3f83675-7671-4669-a808-a0852ab952cb
+              stepCounter: 7085da36-4e3a-4b5f-a188-68637e407fe7
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: R_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'REGION') }}
+      name: REGION
+      schema: ""
+      sqlType: Source
+      table: REGION
+      type: sourceInput
+    stepCounter: 7085da36-4e3a-4b5f-a188-68637e407fe7

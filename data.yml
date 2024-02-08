@@ -4,11 +4,17 @@ jobs: {}
 locations:
   DESTINATION:
     mappingDefinitions:
+      "12":
+        database: BEN_EDW
+        schema: CANARY_ENV_BLANK_BASE
       "2":
         database: BEN_EDW
         schema: CANARY_ENV_BLANK_BASE
   SOURCE:
     mappingDefinitions:
+      "12":
+        database: COALESCE_SAMPLE_DATABASE
+        schema: TPCH_SF001
       "2":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001

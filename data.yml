@@ -1,17 +1,17 @@
-defaultStorageMapping: WORK
+defaultStorageMapping: DESTINATION
 installedPackages: {}
 jobs: {}
 locations:
-  SAMPLE:
+  DESTINATION:
+    mappingDefinitions:
+      "2":
+        database: BEN_EDW
+        schema: CANARY_ENV_BLANK_BASE
+  SOURCE:
     mappingDefinitions:
       "2":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
-  WORK:
-    mappingDefinitions:
-      "2":
-        database: BEN_EDW
-        schema: WS_SCHEMA_1
 macros:
   Macro-1:
     id: "1"

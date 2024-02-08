@@ -3,7 +3,7 @@ steps:
     operation:
       config:
         insertStrategy: INSERT
-        postSQL: ""
+        postSQL: SELECT * FROM {{ ref_no_link('SOURCE','CUSTOMER') }}
         preSQL: ""
         testsEnabled: true
         truncateBefore: true

@@ -7,12 +7,18 @@ locations:
       "13":
         database: BEN_EDW
         schema: CANARY_ENV_BLANK_BASE
+      "17":
+        database: BEN_EDW
+        schema: BROKEN_ENV_SCHEMA
       "2":
         database: BEN_EDW
         schema: CANARY_ENV_BLANK_BASE
   SOURCE:
     mappingDefinitions:
       "13":
+        database: COALESCE_SAMPLE_DATABASE
+        schema: TPCH_SF001
+      "17":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
       "2":

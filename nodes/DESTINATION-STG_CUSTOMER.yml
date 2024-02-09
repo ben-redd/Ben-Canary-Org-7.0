@@ -1,9 +1,9 @@
 steps:
-  STG_CUSTOMER-5bbeb428-2134-4298-9bdf-846722387a52:
+  STG_CUSTOMER-18df21b9-6f1d-47fd-98f3-c260194ee7b6:
     operation:
       config:
         insertStrategy: INSERT
-        postSQL: SELECT * FROM {{ ref_no_link('SOURCE','CUSTOMER') }}
+        postSQL: ""
         preSQL: ""
         testsEnabled: true
         truncateBefore: true
@@ -18,9 +18,10 @@ steps:
         columns:
           - appliedColumnTests:
               hasNull: true
+              isDistinct: true
             columnReference:
-              columnCounter: f64f2e9d-cb50-4194-b3ba-91cfafd7e094
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 72c4312b-a804-462d-97c1-9e5eb0484642
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: NUMBER(38,0)
             description: SF*150,000 are populated
             name: C_CUSTKEY
@@ -32,9 +33,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: a8ccf304-1515-4071-b8bb-42e51f98ff15
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 64de97bb-a2d7-4004-b8b4-7d99a1f9dcdf
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: VARCHAR(25)
             description: ""
             name: C_NAME
@@ -46,9 +48,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 60e6769f-232a-4325-bd4f-990da4baefad
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 20608d0a-a819-4d8c-8ab8-676be9a4d6a9
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: VARCHAR(40)
             description: ""
             name: C_ADDRESS
@@ -60,9 +63,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 1d9a6334-7462-4534-9fa7-1c1ad1b85188
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: e7ee2761-dd41-4c04-8576-dd55b2359134
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: NUMBER(38,0)
             description: Foreign Key to N_NATIONKEY
             name: C_NATIONKEY
@@ -74,9 +78,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: b1f57842-861d-4c33-9033-b6e7345d99bc
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 80a65ae5-ee51-4ed6-a6b1-c1ed2cbe0539
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: VARCHAR(15)
             description: ""
             name: C_PHONE
@@ -88,9 +93,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 04b75405-b9ad-4f73-b88e-aeb2f41dc637
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 3ef85b09-e74a-4872-87be-207037e0a0ac
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: NUMBER(12,2)
             description: ""
             name: C_ACCTBAL
@@ -102,9 +108,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 673a8bce-8654-4311-af8c-fe0011513eeb
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 19b1c240-3156-4f74-b8bb-005037e7c593
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: VARCHAR(10)
             description: ""
             name: C_MKTSEGMENT
@@ -116,9 +123,10 @@ steps:
                 transform: ""
           - appliedColumnTests:
               hasNull: false
+              isDistinct: false
             columnReference:
-              columnCounter: 42fba86f-cff9-4ee5-b263-6e4719d40baa
-              stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+              columnCounter: 24da10a8-0f8e-4262-9119-1dac6fa6edc7
+              stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6
             dataType: VARCHAR(117)
             description: ""
             name: C_COMMENT
@@ -131,6 +139,7 @@ steps:
         cteString: ""
         enabledColumnTestIDs:
           - hasNull
+          - isDistinct
         sourceMapping:
           - aliases: {}
             customSQL:
@@ -147,4 +156,4 @@ steps:
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: 5bbeb428-2134-4298-9bdf-846722387a52
+    stepCounter: 18df21b9-6f1d-47fd-98f3-c260194ee7b6

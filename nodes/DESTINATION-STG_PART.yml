@@ -14,7 +14,12 @@ steps:
       locationName: DESTINATION
       materializationType: table
       metadata:
-        appliedNodeTests: []
+        appliedNodeTests:
+          - continueOnFailure: true
+            description: ""
+            name: PARTKEY TEST
+            runOrder: After
+            templateString: SELECT * FROM {{ ref_no_link('DESTINATION','STG_PART') }} WHERE P_PARTKEY < 0
         columns:
           - appliedColumnTests:
               hasNull: true

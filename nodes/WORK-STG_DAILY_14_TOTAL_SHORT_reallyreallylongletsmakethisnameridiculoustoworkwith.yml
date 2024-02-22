@@ -1,5 +1,5 @@
 steps:
-  STG_DAILY_14_TOTAL_SHORT-934b25f1-adf4-4ae8-b1fb-143423d901fc:
+  STG_DAILY_14_TOTAL_SHORT_reallyreallylongletsmakethisnameridiculoustoworkwith-934b25f1-adf4-4ae8-b1fb-143423d901fc:
     operation:
       config:
         insertStrategy: INSERT
@@ -51,9 +51,9 @@ steps:
                 nodeName: DAILY_14_TOTAL_SHORT
             join:
               joinCondition: FROM {{ ref('SAMPLE', 'DAILY_14_TOTAL_SHORT') }} "DAILY_14_TOTAL_SHORT"
-            name: STG_DAILY_14_TOTAL_SHORT
+            name: STG_DAILY_14_TOTAL_SHORT_reallyreallylongletsmakethisnameridiculoustoworkwith
             noLinkRefs: []
-      name: STG_DAILY_14_TOTAL_SHORT
+      name: STG_DAILY_14_TOTAL_SHORT_reallyreallylongletsmakethisnameridiculoustoworkwith
       overrideSQL: false
       schema: ""
       sqlType: Stage

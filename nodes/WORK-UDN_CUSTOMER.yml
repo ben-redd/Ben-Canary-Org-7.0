@@ -182,7 +182,7 @@ steps:
                 nodeName: STG_CUSTOMER
             join:
               joinCondition: FROM {{ ref('WORK', 'STG_CUSTOMER') }} "STG_CUSTOMER"
-            name: UDN_CUSTOMER
+            name: UDN_CUSTOMER_MULTI_SOURCE
             noLinkRefs: []
       name: UDN_CUSTOMER
       overrideSQL: true

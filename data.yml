@@ -1,5 +1,15 @@
 defaultStorageMapping: WORK
-installedPackages: {}
+installedPackages:
+  pkg-cd-8390:
+    config:
+      entities:
+        nodeTypes:
+          "2":
+            defaultStorageLocation: null
+            isDisabled: false
+      packageVariables: ""
+    id: c4156abf-576e-4147-abb4-c69257462d92
+    releaseID: cd2be64a-693d-44ab-90f3-a0a23daa78d6
 jobs: {}
 locations:
   SAMPLE:
@@ -26,7 +36,7 @@ stepTypes:
       defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |-
-        capitalized: 'UDN CD-8765'                      # Common Name (string, required)
+        capitalized: 'UDN CD-8765'                # Common Name (string, required)
         short: 'UDN'                                     # Node prefix. A '_' delimiter will be added automatically. (string, required)
         plural: 'My Node Names'                          # plural name of common name (string, required)
         tagColor: '#FF5A5F'                              # Node color. CSS colors or hex colors (string, required)

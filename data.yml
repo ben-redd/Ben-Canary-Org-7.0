@@ -1,10 +1,10 @@
 defaultStorageMapping: DESTINATION
 installedPackages: {}
 jobs:
-  Job-1:
+  Job-2:
     excludeSelector: ""
-    id: 1
-    includeSelector: "{ location: DESTINATION name: STG_CUSTOMER } OR { location: SOURCE name: CUSTOMER }"
+    id: 2
+    includeSelector: "{ location: SOURCE name: CUSTOMER } OR { location: DESTINATION name: STG_CUSTOMER }"
     name: Test Job
 locations:
   DESTINATION:

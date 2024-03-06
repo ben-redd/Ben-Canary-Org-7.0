@@ -17,15 +17,31 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 5186b3b3-eecf-41dd-b42a-c6c44096d23e
+              columnCounter: f9b19f9a-329a-4c36-9936-515d3974de5b
               stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
             dataType: NUMBER(38,0)
-            description: Foreign Key to O_ORDERKEY
-            name: L_ORDERKEY
+            description: Foreign Key to C_CUSTKEY
+            name: O_CUSTKEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 8512588a-ca7d-4a91-b4a3-8976875d9cf4
+                    stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
+                transform: ""
+          - columnReference:
+              columnCounter: 584579aa-c73a-4bee-87b9-a4ea9b4ee274
+              stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
+            dataType: NUMBER(38,0)
+            description: |-
+              Foreign key to S_SUPPKEY, second part of the
+              compound Foreign Key to (PS_PARTKEY, 
+              TPC BenchmarkTM H Standard Specification Revision 2.17.1 Page 17
+              PS_SUPPKEY) with L_PARTKEY
+            name: L_SUPPKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 545a6e6b-891e-4575-a431-18f6024c4772
+                  - columnCounter: 45f55cdf-f028-4fa2-83c3-a9e25d852258
                     stepCounter: 23a5fec7-07a2-4e6e-bb50-a280e3f52980
                 transform: ""
           - columnReference:
@@ -44,19 +60,15 @@ steps:
                     stepCounter: 23a5fec7-07a2-4e6e-bb50-a280e3f52980
                 transform: ""
           - columnReference:
-              columnCounter: 584579aa-c73a-4bee-87b9-a4ea9b4ee274
+              columnCounter: 5186b3b3-eecf-41dd-b42a-c6c44096d23e
               stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
             dataType: NUMBER(38,0)
-            description: |-
-              Foreign key to S_SUPPKEY, second part of the
-              compound Foreign Key to (PS_PARTKEY, 
-              TPC BenchmarkTM H Standard Specification Revision 2.17.1 Page 17
-              PS_SUPPKEY) with L_PARTKEY
-            name: L_SUPPKEY
+            description: Foreign Key to O_ORDERKEY
+            name: L_ORDERKEY
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 45f55cdf-f028-4fa2-83c3-a9e25d852258
+                  - columnCounter: 545a6e6b-891e-4575-a431-18f6024c4772
                     stepCounter: 23a5fec7-07a2-4e6e-bb50-a280e3f52980
                 transform: ""
           - columnReference:
@@ -228,18 +240,6 @@ steps:
                     stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
                 transform: ""
           - columnReference:
-              columnCounter: f9b19f9a-329a-4c36-9936-515d3974de5b
-              stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
-            dataType: NUMBER(38,0)
-            description: Foreign Key to C_CUSTKEY
-            name: O_CUSTKEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 8512588a-ca7d-4a91-b4a3-8976875d9cf4
-                    stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
-                transform: ""
-          - columnReference:
               columnCounter: 0a2e6053-3213-47de-bbaa-712a94ce68a2
               stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
             dataType: VARCHAR(1)
@@ -280,13 +280,25 @@ steps:
               stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
             dataType: VARCHAR(15)
             description: ""
-            name: O_ORDERPRIORITY
+            name: O_ORDERPRIORITY_NUM
             nullable: false
             sourceColumnReferences:
               - columnReferences:
                   - columnCounter: b3680a36-0c62-4c13-9dd8-45835d19006c
                     stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
-                transform: ""
+                transform: SPLIT_PART("STG_ORDERS"."O_ORDERPRIORITY", '-', 1 )
+          - columnReference:
+              columnCounter: 9ac780ff-b79b-4b19-9a25-2dd73064e78c
+              stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
+            dataType: VARCHAR(15)
+            description: ""
+            name: O_ORDERPRIORITY_DESC
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: b3680a36-0c62-4c13-9dd8-45835d19006c
+                    stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
+                transform: SPLIT_PART("STG_ORDERS"."O_ORDERPRIORITY", '-', 2 )
           - columnReference:
               columnCounter: 7b62e30e-6c99-4008-8417-914563da7886
               stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
@@ -323,6 +335,27 @@ steps:
                   - columnCounter: 1439ddd4-60b5-4e10-935f-427b61519820
                     stepCounter: d02e3a2f-d2da-473e-bcf7-c79dec847046
                 transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0d33cf8d-880b-410f-8764-294217082d80
+              stepCounter: f5bce82b-a44f-4626-abee-26045be4663a
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            keyColumnType: None
+            name: DAYS_TO_SHIP
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: "0"
+                    stepCounter: "0"
+                transform: DATEDIFF('DAY',"STG_ORDERS"."O_ORDERDATE","STG_LINEITEM"."L_SHIPDATE")
+            systemColumnType: None
+            transform: ""
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:

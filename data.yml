@@ -14,11 +14,17 @@ jobs: {}
 locations:
   SAMPLE:
     mappingDefinitions:
+      "19":
+        database: COALESCE_SAMPLE_DATABASE
+        schema: TPCH_SF001
       "2":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
   WORK:
     mappingDefinitions:
+      "19":
+        database: BEN_EDW
+        schema: CD9149ENV
       "2":
         database: BEN_EDW
         schema: WS_SCHEMA_1

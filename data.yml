@@ -11,18 +11,18 @@ locations:
     mappingDefinitions:
       "19":
         database: BEN_EDW
-        schema: CD9149ENV
+        schema: SMOKE
       "2":
-        database: ""
-        schema: ""
+        database: BEN_EDW
+        schema: WS_SCHEMA_1
   SOURCE:
     mappingDefinitions:
       "19":
         database: COALESCE_SAMPLE_DATABASE
         schema: TPCH_SF001
       "2":
-        database: ""
-        schema: ""
+        database: COALESCE_SAMPLE_DATABASE
+        schema: TPCH_SF001
 macros: {}
 packages: {}
 projects: {}
